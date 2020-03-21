@@ -20,7 +20,7 @@ def welcome(update, context):
 
 def feedback(update, context):
     try:
-        message = 'Por favor, digite um feedback sobre mim:'
+        message = 'Por favor, digite um feedback para o nosso tutorial:'
         update.message.reply_text(message, reply_markup=ReplyKeyboardMarkup([], one_time_keyboard=True)) 
         return STATE1
     except Exception as e:
@@ -36,13 +36,13 @@ def inputFeedback(update, context):
         context.bot.send_message(chat_id=update.effective_chat.id, text=message)
         return STATE1
     else:
-        message = "Muito obrigado pelo seu feedback!"
+        message = "Muito obrigada pelo seu feedback!"
         context.bot.send_message(chat_id=update.effective_chat.id, text=message)
 
 
 def inputFeedback2(update, context):
     feedback = update.message.text
-    message = "Muito obrigado pelo seu feedback!"
+    message = "Muito obrigada pelo seu feedback!"
     context.bot.send_message(chat_id=update.effective_chat.id, text=message)
 
 
